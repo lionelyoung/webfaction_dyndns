@@ -1,0 +1,9 @@
+# Add to crontab:
+# */15 * * * * updatewfip.sh -q
+export WEBFACTION_DYNDNS_DOMAIN=""
+export WEBFACTION_DYNDNS_USER_NAME=""
+export WEBFACTION_DYNDNS_PASSWORD=""
+
+python /home/lionel/Projects/webfaction_dyndns/webfaction_dyndns.py $1
+
+unset WEBFACTION_DYNDNS_DOMAIN WEBFACTION_DYNDNS_USER_NAME WEBFACTION_DYNDNS_PASSWORD
